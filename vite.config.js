@@ -8,7 +8,9 @@ export default defineConfig(async ({ command }) => {
     const needleConfig = await loadConfig();
 
     return {
-        base: "./",
+        //base: "./",
+        // base url
+        base: '/blah',
         plugins: [
             basicSsl(),
             useGzip(needleConfig) ? viteCompression({ deleteOriginFile: true }) : null,
